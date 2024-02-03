@@ -12,17 +12,26 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
-    <header>WodkApp</header>
+<body class="font-roboto font-medium text-white bg-appColor p-4 min-h-screen flex flex-col relative justify-center items-center">
+    <header class="absolute left-4 top-4">
+        <h1>WodkApp</h1>
+    </header>
     <main>
-        <article>
+        <article class="flex flex-col items-center max-w-96">
             <header>
-                <h1>Ile 50tek już za Tobą?</h1>
+                <h2 class="text-5xl text-center">Ile 50tek już za Tobą?</h2>
             </header>
-            <section class="flex flex-col">
-                <img src="img/kieliszek.png" alt="grafika wektorowa przedstawiająca kieliszek do wódki">
-                <p>X</p>
-                <p>Wypiłeś/Wypiłaś już <span>X</span> kieliszków i zyskałeś/zyskałaś <span>X</span> kalorii.</p>
+            <section class="flex flex-col items-center justify-between flex-initial max-h-appContentHeight">
+                <div class="relative">
+                    <img class="w-1/2 max-w-80 m-auto" src="img/kieliszek.png"
+                        alt="grafika wektorowa przedstawiająca kieliszek do wódki">
+                    <p class="text-7xl absolute w-full h-full top-1/2 left-0 flex justify-center">X</p>
+                </div>
+                <div class="flex flex-col gap-y-4">
+                    <button>DODAJ KIELISZEK</button>
+                    <button>USUŃ KIELISZEK</button>
+                </div>
+                <p class="text-center text-2xl">Wypiłeś/Wypiłaś już <span>X</span> kieliszków i zyskałeś/zyskałaś <span>X</span> kalorii.</p>
             </section>
         </article>
     </main>

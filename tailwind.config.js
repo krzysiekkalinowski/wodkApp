@@ -9,7 +9,10 @@ module.exports = {
         'appColor': '#F472B6',
       },
       spacing: {
-        'appHeight': '850px',
+        'appContentHeight': '600px',
+      },
+      fontFamily: {
+        'roboto': ['Roboto Mono', 'monospace'],
       },
     },
   },
