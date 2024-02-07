@@ -8,6 +8,7 @@
     <meta name="description" content="Prosta aplikacja obliczająca ilość kalorii przyjętych w czasie spożycia">
     <meta property="og:title" content="WodkApp">
     <meta property="og:description" content="Prosta aplikacja obliczająca ilość kalorii przyjętych w czasie spożycia">
+    <meta property="og:url" content="https://wodkapp.netlify.app/">
     <meta property="og:image" content="img/og.png">
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="index.css">
@@ -30,8 +31,8 @@
                     <p class="text-7xl absolute w-full h-full top-1/2 left-0 flex justify-center img-counter">X</p>
                 </div>
                 <div class="flex flex-col gap-y-4">
-                    <button class="border-2 border-white px-6 py-3 shadow-sharpShadow z-10 duration-150 hover:shadow-none add-button">DODAJ KIELISZEK</button>
-                    <button class="border-2 border-white px-6 py-3 shadow-sharpShadow z-10 duration-150 hover:shadow-none remove-button">USUŃ KIELISZEK</button>
+                    <button class="border-2 border-white px-6 py-3 shadow-sharpShadow z-10 duration-150 hover:shadow-sharpHoverShadow active:shadow-none add-button">DODAJ KIELISZEK</button>
+                    <button class="border-2 border-white px-6 py-3 shadow-sharpShadow z-10 duration-150 hover:shadow-sharpHoverShadow active:shadow-none remove-button">USUŃ KIELISZEK</button>
                 </div>
                 <p class="text-center text-lg sm:text-2xl">Wypiłeś/Wypiłaś już <span class="vodka-counter">X</span> kieliszków i zyskałeś/zyskałaś <span class="calories-counter">X</span> kalorii.</p>
             </section>
@@ -40,7 +41,7 @@
     <footer class="absolute left-2 bottom-2">
         <p class="text-xs"><a href="https://github.com/krzysiekkalinowski" title="link do konta github" target="_blank">made by Cywilista</a></p>
     </footer>
-    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/main.js" type="module"></script>
 </body>
 
 </html>

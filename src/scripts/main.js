@@ -4,22 +4,26 @@ const imgCounter = document.querySelector('.img-counter');
 const vodkaCounter = document.querySelector('.vodka-counter');
 const caloriesCounter = document.querySelector('.calories-counter');
 
-const updateCounter = () => {
-    imgCounter.innerHTML = localStorage.length;
-    vodkaCounter.innerHTML = localStorage.length;
-    caloriesCounter.innerHTML = (localStorage.length * 231);
+let glasses = 0;
+let calories = (glasses * 116);
+
+const updateCounter = (value) => {
+    imgCounter.innerHTML = value;
+    vodkaCounter.innerHTML = value;
+    caloriesCounter.innerHTML = calories;
 }
 
+
+updateCounter(glasses);
+
 addButton.addEventListener('click', () => {
-    const glassNumber = localStorage.length;
-    localStorage.setItem(`Glass nr ${glassNumber + 1}`, `${(glassNumber + 1)}`);
-    updateCounter();
+    glasses = glasses + 1;
+    updateCounter(glasses);
 })
 
 removeButton.addEventListener('click', () => {
-    const glassNumber = localStorage.length;
-    localStorage.removeItem(`Glass nr ${glassNumber}`);
-    updateCounter();
+    if (glasses >=1) {
+        glasses = glasses - 1;
+        updateCounter(glasses);
+    };
 });
-
-updateCounter();

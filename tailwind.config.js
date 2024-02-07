@@ -16,6 +16,7 @@ module.exports = {
       },
       boxShadow: {
         'sharpShadow': '3px 3px 0 0 white',
+        'sharpHoverShadow': '4px 4px 0 0 white',
       },
     },
   },
