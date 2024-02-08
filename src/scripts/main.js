@@ -4,10 +4,17 @@ const imgCounter = document.querySelector('.img-counter');
 const vodkaCounter = document.querySelector('.vodka-counter');
 const caloriesCounter = document.querySelector('.calories-counter');
 
-let glasses = 0;
-let lastCalories = 0;
-
 const key = new Date().toISOString().slice(0, 10);
+
+const storedValue = localStorage.getItem(key);
+if (storedValue) {
+    const numbers = storedValue.match(/\d+/g).map(Number);
+    glasses = numbers[0];
+    lastCalories = numbers[1];
+} else {
+    glasses = 0;
+    lastCalories = 0;
+}
 
 const updateCounter = (value) => {
     imgCounter.innerHTML = value;
@@ -18,7 +25,7 @@ const updateCounter = (value) => {
 };
 
 const updateHistory = () => {
-    localStorage.setItem(`${key}:`, `Ilość kieliszków: ${glasses}, Ilość kalorii: ${lastCalories}`)
+    localStorage.setItem(`${key}`, `Ilość kieliszków: ${glasses}, Ilość kalorii: ${lastCalories}`)
 };
 
 updateCounter(glasses);
